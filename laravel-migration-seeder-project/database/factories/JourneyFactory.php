@@ -22,7 +22,7 @@ class JourneyFactory extends Factory
             "station_arrival" => fake() -> city(),//stazione di arrivo
             "time_departure" => fake() -> dateTime(),//orario di partenza
             "time_arrival" => fake() -> dateTime(),//orario di arrivo
-            "train_code" => fake() -> numerify("##########"),//codice treno
+            "train_code" => fake() -> unique() -> numerify("##########"),//codice treno
             "carriages" => fake() -> numberBetween(1,20) ,//numero carrozze
             "on_time" => fake() -> boolean(),//in orario
             "canceled" => fake() -> boolean() ,//cancellato

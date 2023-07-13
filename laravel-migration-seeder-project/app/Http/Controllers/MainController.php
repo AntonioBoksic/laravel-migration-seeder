@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+// questo lo importo io per poter usare il model Student
+use App\Models\Journey;
+
+class MainController extends Controller
+{
+public function index() {
+
+    $journeys = Journey :: all();
+    // dd($journeys[3]);
+
+    return view("welcome", compact("journeys"));
+
+    }
+}

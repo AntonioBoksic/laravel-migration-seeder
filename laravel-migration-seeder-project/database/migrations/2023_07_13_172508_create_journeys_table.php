@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('journeys', function (Blueprint $table) {
             $table->id(); // qusto è di default se si crea correttamente la migration
 
-            $table->string("company", 100)->unique(); //azienda
+            $table->string("company", 100); //azienda
             $table->string("station_departure", 100);//stazione di partenza
             $table->string("station_arrival", 100);//stazione di arrivo
             $table->datetime("time_departure");//orario di partenza
