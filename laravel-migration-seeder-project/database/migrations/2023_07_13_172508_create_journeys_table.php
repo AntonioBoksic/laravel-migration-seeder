@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('journeys', function (Blueprint $table) {
             $table->id(); // qusto è di default se si crea correttamente la migration
 
-            $table->string("company")->unique(); //azienda
-            $table->string("station_departure");//stazione di partenza
-            $table->string("station_arrival");//stazione di arrivo
-            $table->time("time_departure");//orario di partenza
-            $table->time("time_arrival");//orario di arrivo
-            $table->string("train_code")->unique();//codice treno
+            $table->string("company", 100)->unique(); //azienda
+            $table->string("station_departure", 100);//stazione di partenza
+            $table->string("station_arrival", 100);//stazione di arrivo
+            $table->datetime("time_departure");//orario di partenza
+            $table->datetime("time_arrival");//orario di arrivo
+            $table->string("train_code", 10)->unique();//codice treno
             $table->integer("carriages");//numero carrozze
             $table->boolean("on_time")->default(true);//in orario
             $table->boolean("canceled")->default(false);//cancellato
