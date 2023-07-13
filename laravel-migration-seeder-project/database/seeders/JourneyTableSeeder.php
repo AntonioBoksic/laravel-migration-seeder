@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
                             //questo lo aggiungiamo noi
-use App\Models\House;
+use App\Models\Journey;
 
 class JourneyTableSeeder extends Seeder
 {
@@ -17,6 +17,6 @@ class JourneyTableSeeder extends Seeder
      */
     public function run()
     {
-        House :: factory -> count(20) -> create()
+        Journey :: factory -> count(20) -> create();
     }
 }
