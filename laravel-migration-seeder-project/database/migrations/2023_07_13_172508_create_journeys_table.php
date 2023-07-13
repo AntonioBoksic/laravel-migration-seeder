@@ -13,21 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('traits', function (Blueprint $table) {
+        Schema::create('journeys', function (Blueprint $table) {
             $table->id(); // qusto è di default se si crea correttamente la migration
 
             $table->string("company")->unique(); //azienda
             $table->string("station_departure");//stazione di partenza
             $table->string("station_arrival");//stazione di arrivo
-            $table->timestamp("time_departure");//orario di partenza
-            $table->timestamp("time_arrival");//orario di arrivo
+            $table->time("time_departure");//orario di partenza
+            $table->time("time_arrival");//orario di arrivo
             $table->string("train_code")->unique();//codice treno
             $table->integer("carriages");//numero carrozze
-            $table->boolean("on_time")->default(1);//in orario
-            $table->boolean("canceled")->default(0);//cancellato
+            $table->boolean("on_time")->default(true);//in orario
+            $table->boolean("canceled")->default(false);//cancellato
 
             $table->timestamps(); // qusto è di default se si crea correttamente la migration
-
         });
     }
 
@@ -38,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('traits');
+        Schema::dropIfExists('journeys');
     }
 };
