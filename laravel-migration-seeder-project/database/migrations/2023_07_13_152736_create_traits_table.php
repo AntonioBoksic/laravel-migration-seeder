@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id(); // qusto è di default se si crea correttamente la migration
 
             $table->company(); //azienda
-            $table->station_departure();//stazione di partenza
-            $table->station_arrival();//stazione di arrivo
-            $table->time_departure();//orario di partenza
-            $table->time_arrival();//orario di arrivo
-            $table->train_code();//codice treno
-            $table->carriages();//numero carrozze
-            $table->on_time();//in orario
-            $table->cancelled();//cancellato
+            $table->string("station_departure");//stazione di partenza
+            $table->string("station_arrival");//stazione di arrivo
+            $table->timestamp("time_departure");//orario di partenza
+            $table->timestamp("time_arrival");//orario di arrivo
+            $table->string("train_code");//codice treno
+            $table->integer("carriages");//numero carrozze
+            $table->boolean("on_time");//in orario
+            $table->boolean("canceled");//cancellato
 
             $table->timestamps(); // qusto è di default se si crea correttamente la migration
 
