@@ -17,6 +17,6 @@ class JourneyTableSeeder extends Seeder
      */
     public function run()
     {
-        Journey :: factory -> count(20) -> create();
+        Journey::factory() -> count(20) -> create();
     }
 }
