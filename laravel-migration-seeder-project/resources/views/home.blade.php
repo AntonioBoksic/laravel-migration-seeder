@@ -7,7 +7,7 @@
 
         <ul>
             @foreach ($journeys as $journey)
-            <li class="d-flex my-5">
+            <li class="d-flex my-5 w-10 justify-content-start">
                 <div>
                     <strong>
                     Company:
