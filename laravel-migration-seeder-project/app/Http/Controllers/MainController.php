@@ -12,9 +12,8 @@ class MainController extends Controller
 public function index() {
 
     $journeys = Journey :: all();
-    // dd($journeys[3]);
 
-    return view("welcome", compact("journeys"));
+    return view("home", compact("journeys"));
 
     }
 }

@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-// QUA IMPORTIAMO IL CONTROLLER
 use App\Http\Controllers\MainController;
 
-Route::get("/", [MainController :: class, "index"]) -> name("welcome");
+Route::get("/" , [MainController :: class, "index"]) -> name("home");
+
